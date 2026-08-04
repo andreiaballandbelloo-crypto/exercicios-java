@@ -30,10 +30,10 @@ public class ExercicioUm {
 
             case "/":
 
-                if (numero2 != 0) {
-                    System.out.println("Resultado " + (numero1 / numero2));
-                } else {
-                    System.out.println("Erro! Divisão por zero.");
+                try {
+                    System.out.println("Resultado: " + (numero1 / numero2));
+                } catch(ArithmeticException e) {
+                    System.out.println("Erro. Divisão por zero.");
                 }
                 break;
 
